@@ -1,0 +1,10 @@
+name: pk4builder
+version: '0.1.0'
+main: me.honkling.pk4builder.PKBuilder
+api-version: '1.21'
+prefix: pk4builder
+authors: [ honkling ]
+
+description:
+  parkour for builder: the plugin
+website: https://github.com/honkling/pk4builder
