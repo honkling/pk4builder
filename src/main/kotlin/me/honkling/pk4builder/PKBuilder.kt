@@ -10,6 +10,12 @@ val instance = JavaPlugin.getPlugin(PKBuilder::class.java)
 lateinit var world: World; private set
 
 class PKBuilder : JavaPlugin() {
+    override fun onLoad() {
+        val pluginManager = Bukkit.getPluginManager()
+        val cosmeticsPlugin = pluginManager.getPlugin("MinehutCosmetics")
+        cosmeticsPlugin?.let { pluginManager.disablePlugin(it) }
+    }
+
     override fun onEnable() {
         world = Bukkit.getWorlds()[0]
 

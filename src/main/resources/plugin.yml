@@ -4,7 +4,8 @@ main: me.honkling.pk4builder.PKBuilder
 api-version: '1.21'
 prefix: pk4builder
 authors: [ honkling ]
-
+depend: [ LuckPerms ]
+softdepend: [ MinehutCosmetics ]
 description:
   parkour for builder: the plugin
 website: https://github.com/honkling/pk4builder

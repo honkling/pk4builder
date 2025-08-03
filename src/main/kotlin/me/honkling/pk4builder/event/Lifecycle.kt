@@ -30,7 +30,7 @@ private fun onPlayerJoin(event: PlayerJoinEvent) {
 
     event.joinMessage("<system>Welcome, <s>${player.name}</s>!".mm)
 
-//    if (!player.hasPlayedBefore())
+    if (!player.hasPlayedBefore())
         player.openBook(welcomeBook)
 }
 

@@ -18,12 +18,14 @@ private fun onInteract(event: PlayerInteractEvent) {
     val block = event.clickedBlock
         ?: return
 
-    if (event.action != Action.PHYSICAL || block.type != Material.LIGHT_WEIGHTED_PRESSURE_PLATE || block.location in player.previousLevels)
+    val location = block.location.toCenterLocation()
+
+    if (event.action != Action.PHYSICAL || block.type != Material.LIGHT_WEIGHTED_PRESSURE_PLATE || location in player.previousLevels)
         return
 
     player.levelCounter++
-    player.currentLevel = block.location
-    player.previousLevels = player.previousLevels.also { it += block.location }
+    player.currentLevel = location
+    player.previousLevels = player.previousLevels.also { it += location }
     player.playSound(Sound.sound {
         it.type(Key.key(Key.MINECRAFT_NAMESPACE, "block.note_block.pling"))
         it.pitch(2.0f)

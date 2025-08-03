@@ -17,6 +17,7 @@ repositories {
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT")
+    compileOnly("net.luckperms:api:5.4")
     implementation("io.github.honkling.commando:spigot:3.0.2")
     implementation(kotlin("reflect"))
 }
